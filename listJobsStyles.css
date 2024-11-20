@@ -1,0 +1,144 @@
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e90ff;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.navbar-logo img {
+  width: 120px;
+  height: auto;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.navbar-links li a {
+  color: #fff;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navbar-links li a:hover {
+  color: #ffd700;
+}
+
+body {
+  margin: 0;
+  padding-top: 80px;
+  font-family: Arial, sans-serif;
+  background-color: #f4f7f9;
+}
+
+/* Main Content */
+.job-listings-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.job-listings-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.job-listings-header h1 {
+  font-size: 2rem;
+  color: #1e90ff;
+  margin-bottom: 0.5rem;
+}
+
+.job-listings-header p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Job Listings Grid */
+.job-listings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Job Card */
+.job-card {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.job-card h2 {
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.job-card p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.job-card-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.view-button,
+.edit-button,
+.delete-button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.view-button {
+  background-color: #1e90ff;
+  color: #fff;
+}
+
+.edit-button {
+  background-color: #ffa500;
+  color: #fff;
+}
+
+.delete-button {
+  background-color: #ff6347;
+  color: #fff;
+}
+
+.view-button:hover {
+  background-color: #1c86ee;
+}
+
+.edit-button:hover {
+  background-color: #e69500;
+}
+
+.delete-button:hover {
+  background-color: #ff4500;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Applicants for Job</title>
+    <link rel="stylesheet" href="applicantStyles.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="navbar-logo">
+        <img src="Logo.png" alt="Logo" />
+      </div>
+      <ul class="navbar-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="find-jobs.html">Find Jobs</a></li>
+        <li><a href="https://sabikerja.com/?page_id=42">Blogs</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="applicants-container">
+      <header class="applicants-header">
+        <h1 id="job-title">Applicants for Position</h1>
+        <p>Review the candidates who have applied for this role.</p>
+      </header>
+
+      <!-- Applicants Grid -->
+      <div class="applicants-grid">
+        <div class="applicant-card">
+          <h2>John Doe</h2>
+          <p>Email: john.doe@example.com</p>
+          <p>Phone: +123 456 7890</p>
+          <div class="applicant-actions">
+            <button class="view-resume-button">View Resume</button>
+            <button class="reject-button">Reject</button>
+          </div>
+        </div>
+        <div class="applicant-card">
+          <h2>Jane Smith</h2>
+          <p>Email: jane.smith@example.com</p>
+          <p>Phone: +123 987 6543</p>
+          <div class="applicant-actions">
+            <button class="view-resume-button">View Resume</button>
+            <button class="reject-button">Reject</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript to Display Job Title from URL -->
+    <script>
+      // Get the job title from the URL parameters
+      const urlParams = new URLSearchParams(window.location.search);
+      const jobTitle = urlParams.get("job");
+
+      // Set job title in header
+      if (jobTitle) {
+        document.getElementById(
+          "job-title"
+        ).textContent = `Applicants for ${decodeURIComponent(
+          jobTitle
+        )} Position`;
+      }
+    </script>
+  </body>
+</html>

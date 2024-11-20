@@ -1,0 +1,142 @@
+/* Reset default margin and padding for body and html */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar Styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1e90ff;
+  padding: 1rem 2rem;
+  box-sizing: border-box; /* Include padding within the width */
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Navbar logo */
+.navbar-logo img {
+  width: 120px;
+  height: auto;
+}
+
+/* Navbar links */
+.navbar-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.navbar-links li a {
+  color: #fff;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navbar-links li a:hover {
+  color: #ffd700; /* Change color on hover */
+}
+
+/* Add space for fixed navbar at the top */
+body {
+  padding-top: 80px; /* Adjust based on navbar height */
+}
+
+/* Application Form Container */
+.application-form-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.application-form-container h1 {
+  font-size: 2.5rem;
+  color: #1e90ff;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Form Styles */
+.application-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+label {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="file"] {
+  padding: 1rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="file"]:focus {
+  border-color: #1e90ff;
+  outline: none;
+}
+
+.submit-button {
+  background-color: #1e90ff;
+  color: #fff;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+  .navbar-logo img {
+    width: 100px; /* Adjust logo size on smaller screens */
+  }
+
+  .application-form-container {
+    padding: 1rem;
+  }
+
+  .application-form-container h1 {
+    font-size: 2rem; /* Smaller header for mobile */
+  }
+
+  .application-form {
+    gap: 1rem;
+  }
+}

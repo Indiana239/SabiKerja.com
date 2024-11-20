@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Details</title>
+    <link rel="stylesheet" href="jobsStyle.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="navbar-logo">
+        <img src="Logo.png" alt="Logo" />
+      </div>
+      <ul class="navbar-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="find-jobs.html">Find Jobs</a></li>
+        <li><a href="https://sabikerja.com/?page_id=42">Blogs</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <!-- Job Details Container -->
+    <div class="job-details-container">
+      <header class="job-details-header">
+        <h1 id="job-title">Job Title</h1>
+        <p id="job-location">Location</p>
+      </header>
+
+      <section class="job-description">
+        <h2>Job Description</h2>
+        <p id="job-desc">This is a placeholder for job description...</p>
+      </section>
+
+      <section class="job-requirements">
+        <h2>Requirements</h2>
+        <ul id="job-requirements">
+          <li>Requirement 1</li>
+          <li>Requirement 2</li>
+          <li>Requirement 3</li>
+          <!-- Add more requirements as needed -->
+        </ul>
+      </section>
+
+      <div class="apply-now">
+        <button onclick="applyForJob()">Apply Now</button>
+      </div>
+    </div>
+
+    <!-- JavaScript to Display Job Details from URL -->
+    <script>
+      // Get the job title from the URL parameters
+      const urlParams = new URLSearchParams(window.location.search);
+      const jobTitle = urlParams.get("job");
+
+      // Display job title in header
+      if (jobTitle) {
+        document.getElementById("job-title").textContent =
+          decodeURIComponent(jobTitle);
+        // For demonstration, we can set job location, description, and requirements here
+        document.getElementById("job-location").textContent =
+          "Jakarta Pusat, Jakarta"; // Example location
+        document.getElementById("job-desc").textContent =
+          "We are looking for a talented software engineer to join our team and work on various software projects..."; // Example description
+        document.getElementById("job-requirements").innerHTML = `
+        <li>Strong knowledge of JavaScript and React.js</li>
+        <li>Experience with Agile methodologies</li>
+        <li>Excellent communication skills</li>
+      `; // Example requirements
+      }
+
+      function applyForJob() {
+        // Redirect to the application form (or wherever you handle applications)
+        window.location.href = "application-form.html";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Job Listings</title>
+    <link rel="stylesheet" href="listJobsStyles.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="navbar-logo">
+        <img src="Logo.png" alt="Logo" />
+      </div>
+      <ul class="navbar-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="find-jobs.html">Find Jobs</a></li>
+        <li><a href="https://sabikerja.com/?page_id=42">Blogs</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="job-listings-container">
+      <header class="job-listings-header">
+        <h1>My Open Job Listings</h1>
+        <p>Manage all your current job listings below.</p>
+      </header>
+
+      <!-- Job Listings Grid -->
+      <div class="job-listings-grid">
+        <!-- Example Job Listing -->
+        <div class="job-card">
+          <h2>Software Engineer</h2>
+          <p>Company: Tech Solutions</p>
+          <p>Location: Jakarta Pusat, Jakarta</p>
+          <p>
+            Short Description: Looking for a passionate software engineer to
+            join our tech team...
+          </p>
+          <div class="job-card-actions">
+            <button
+              class="view-button"
+              onclick="viewApplicants('Software Engineer')"
+            >
+              View
+            </button>
+            <button class="edit-button">Edit</button>
+            <button class="delete-button">Delete</button>
+          </div>
+        </div>
+        <div class="job-card">
+          <h2>Project Manager</h2>
+          <p>Company: Business Solutions Inc.</p>
+          <p>Location: Remote</p>
+          <p>
+            Short Description: We are looking for an experienced project manager
+            to lead projects...
+          </p>
+          <div class="job-card-actions">
+            <button
+              class="view-button"
+              onclick="viewApplicants('Project Manager')"
+            >
+              View
+            </button>
+            <button class="edit-button">Edit</button>
+            <button class="delete-button">Delete</button>
+          </div>
+        </div>
+        <!-- Repeat job-card elements for additional job listings as needed -->
+      </div>
+    </div>
+
+    <!-- JavaScript to Redirect to Applicants Page -->
+    <script>
+      function viewApplicants(jobTitle) {
+        // Encode job title to be used in URL
+        const encodedJobTitle = encodeURIComponent(jobTitle);
+        // Redirect to applicants page with job title as query parameter
+        window.location.href = `applicants.html?job=${encodedJobTitle}`;
+      }
+    </script>
+  </body>
+</html>
